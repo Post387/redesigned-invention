@@ -1,0 +1,115 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: url(code-coding-computer-574073.jpg);
+}
+
+    /*background color of nav bar*/
+.topnav {
+  overflow: hidden;
+  background-color: steelblue;
+}
+
+    /*Nav bar text*/
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+    /*Changes background color when hover*/
+.topnav a:hover {
+  background-color: skyblue;
+  color: black;
+}
+  /*Changes background color when hover home icon*/
+.topnav a.active:hover {
+  background-color: skyblue;
+  color: black;
+}
+
+    /*Different color for home link*/
+.topnav a.active {
+  background-color: deepskyblue;
+  color: white;
+}
+    
+/* fixed Sandbox*/
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+}
+    
+.sidenav {
+    width: 160px;
+    height: auto;
+    position: fixed;
+    z-index: 1;
+    top: 90px;
+    left: 10px;
+    background-color: lightgray;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+
+.sidenav a {
+    padding: 10px 8px 20px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #2196F3;
+    display: block;
+}
+
+    /*Changes background color of side nav*/
+.sidenav a:hover {
+    background-color: skyblue;
+    color: #064579;
+}
+
+    .Info {
+        width: 300px;
+        height: auto;
+        position: fixed;
+        z-index: 1;
+        top: 90px;
+        left: 200px;
+        background-color: beige;
+        overflow: hidden;
+        padding: 10px 15px;
+        font-size: 20px;
+        
+    }   
+    
+.main {
+    margin-top: 60px; /* Add a top margin to avoid content overlay */
+    position: fixed;
+    left: 190px;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container .box {
+  background-color: #f1f1f1;
+  width: 50%;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;   
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

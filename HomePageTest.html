@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+    /*background color of nav bar*/
+.topnav {
+  overflow: hidden;
+  background-color: steelblue;
+}
+
+    /*Nav bar text*/
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+    /*Changes background color when hover*/
+.topnav a:hover {
+  background-color: skyblue;
+  color: black;
+}
+  /*Changes background color when hover home icon*/
+.topnav a.active:hover {
+  background-color: skyblue;
+  color: black;
+}
+
+    /*Different color for home link*/
+.topnav a.active {
+  background-color: deepskyblue;
+  color: white;
+}
+    
+/* fixed Sandbox*/
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+}
+    
+.sidenav {
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 10px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+
+.sidenav a {
+    padding: 10px 8px 20px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #2196F3;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #064579;
+}
+    
+.main {
+    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+</style>
+</head>    
+
+<body>
+<div class="topnav">
+  <a class="active" href="#home">Code Classic</a>
+  <a>Python</a>
+  <a>Java</a>
+  <a>About</a>
+</div>
+    
+<div class="sidenav">
+  <a >Print</a>
+  <a>Variables</a>
+  <a>Data Types</a>
+  <a>Arithmietic Operators</a>
+</div>
+
+<!--Embedded Link for user to try out lessons.-->
+        <div class = "footer"> 
+            <iframe src="https://trinket.io/embed/python/7b0beec272" marginwidth="0" marginheight="0" allowfullscreen="" width="100%" height="200" frameborder="0"></iframe>
+        </div>
+    </body>
+</html>
