@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
-<script>
-    button {
-        border: none;
-        cursor: pointer;
-        width: 100;
-        height: 100;
-    }
-    .big - btn {
-        width: 90 px;
-        height: 40 px;
-    }
-</script>
+
 
 <head>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        button {
+            border: none;
+            cursor: pointer;
+            width: 100;
+            height: 100;
+        }
+        .big - btn {
+            width: 90 px;
+            height: 40 px;
+        }
+    </script>
 </head>
 
 <body>
@@ -27,10 +28,10 @@
     </div>
 
     <div class="sidenav">
-        <a>Print</a>
+        <button id="prtChanged"><a href="#">Print keyword</a></button>
         <button id="varChanged"><a href="#">Variable keyword</a></button>
-        <button id="dtChanged"><a>Data Types</a></button>
-        <a>Arithmetic Operators</a>
+        <button id="dtChanged"><a href="#">Data Types</a></button>
+        <button id="arithChanged"><a href="#">Arithmetic Operators</a></button>
     </div>
 
 
@@ -52,14 +53,21 @@
     <div class="footer">
         <iframe src="https://trinket.io/embed/python/7b0beec272" marginwidth="0" marginheight="0" allowfullscreen="" width="100%" height="200" frameborder="0"></iframe>
     </div>
+    <script>
+        document.getElementById("varChanged").onclick = function() {
+            document.getElementById("numberTwo").innerHTML = "Variables are Storage places in memeory";
+        }
+        document.getElementById("dtChanged").onclick = function() {
+            document.getElementById("numberTwo").innerHTML = "Data types determine what type of data a variable can hold.";
+        }
+        document.getElementById("prtChanged").onclick = function() {
+            document.getElementById("numberTwo").innerHTML = 'In the language of C, the <b>printf</b> fucntion stands for "print formatted". This fucntion is used to display text output.';
+        }
+        document.getElementById("arithChanged").onclick = function() {
+            document.getElementById("numberTwo").innerHTML = "Arithmetic operators allow math to be done on variables.";
+        }
+    </script>
 </body>
-<script>
-    document.getElementById("varChanged").onclick = function() {
-        document.getElementById("numberTwo").innerHTML = "Variables are Storage places in memeory";
-    }
-    document.getElementById("dtChanged").onclick = function() {
-        document.getElementById("numberTwo").innerHTML = "Datatypes determine what type of data a variable can hold.";
-    }
-</script>
+
 
 </html>
