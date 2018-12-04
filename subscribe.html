@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Subscribe</title>
+    <style>
+        .alnright {
+            text-align: right;
+            margin-right: 1em;
+        }
+    </style>
+</head>
+
+<body style="background-color: skyblue;">
+    <div class="container">
+        <form action="" onsubmit="return checkIt();">
+            <table>
+                <tr>
+                    <td class="alnright">
+                        Enter Name:
+                    </td>
+                    <td>
+                        <input id="userName" type="text" name="userName" size="33" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="alnright">
+                        Enter email:
+                    </td>
+                    <td>
+                        <input id="newEmail" type="text" name="newEmail" size="33" placeholder="Enter email" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="alnright">
+                        Confirm email:
+                    </td>
+                    <td>
+                        <input id="confEmail" type="text" name="confEmail" size="33" placeholder="confirm Email" />
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" name="submit" value="Submit!" />
+        </form>
+    </div>
+    <p id="eName"></p>
+</body>
+
+<script>
+    function checkIt() {
+        var userName = document.getElementById("userName").value;
+        var newEmail = document.getElementById("newEmail").value;
+        var confEmail = document.getElementById("confEmail").value;
+
+        if (userName === "") {
+            alert("You must enter your Name.");
+            return false;
+        }
+        if (newEmail.search("@") == -1) {
+            alert("Bad email format use: name@somewhere.xxx");
+            return false;
+        }
+        if (confEmail.search("@") == -1) {
+            alert("Bad email format use: name@somewhere.xxx");
+            return false;
+        }
+
+        if (newEmail === confEmail) {
+            alert(userName + " Thank you for subscribing");
+            window.close();
+            return true;
+        } else {
+            alert(userName + " your email does not match. Please re-enter your email");
+            newEmail.focus();
+            newEmail.select();
+            return false;
+        }
+    }
+</script>
+
+</html>
